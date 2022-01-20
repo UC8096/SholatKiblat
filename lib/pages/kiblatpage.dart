@@ -1,35 +1,36 @@
 part of 'pages.dart';
 
 class KiblatPage extends StatelessWidget {
-  KiblatPage({Key? key}) : super(key: key);
-  final _deviceSupport = FlutterQiblah.androidDeviceSensorSupport();
+  const KiblatPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: FutureBuilder(
-        future: _deviceSupport,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(
-              child: CircularProgressIndicator(
-                strokeWidth: 2,
-              ),
-            );
-          }
-          if (snapshot.hasError) {
-            return Center(
-              child: Text('Error: ${snapshot.error.toString()}'),
-            );
-          }
-          if (snapshot.hasData) {
-            return Center(child: QiblahCompassWidget());
-          } else {
-            return const Text('Error');
-          }
-        },
-      ),
-    );
+    return GetBuilder<KiblatController>(builder: (controller) {
+      return Scaffold(
+        body: FutureBuilder(
+          future: controller.deviceSupport,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(
+                child: CircularProgressIndicator(
+                  strokeWidth: 2,
+                ),
+              );
+            }
+            if (snapshot.hasError) {
+              return Center(
+                child: Text('Error: ${snapshot.error.toString()}'),
+              );
+            }
+            if (snapshot.hasData) {
+              return Center(child: QiblahCompassWidget());
+            } else {
+              return const Text('Error');
+            }
+          },
+        ),
+      );
+    });
   }
 }
 
@@ -53,7 +54,7 @@ class QiblahCompassWidget extends StatelessWidget {
       stream: FlutterQiblah.qiblahStream,
       builder: (_, AsyncSnapshot<QiblahDirection> snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return loadingIndicator();
+          return const Center(child: LoadWidget());
         }
 
         final qiblahDirection = snapshot.data!;
@@ -90,16 +91,6 @@ class QiblahCompassWidget extends StatelessWidget {
           ],
         );
       },
-    );
-  }
-
-  Widget loadingIndicator() {
-    final widget = (Platform.isAndroid)
-        ? const CircularProgressIndicator()
-        : const CupertinoActivityIndicator();
-    return Container(
-      alignment: Alignment.center,
-      child: widget,
     );
   }
 }
