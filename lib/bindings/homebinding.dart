@@ -7,5 +7,6 @@ class HomeBinding extends Bindings {
     Get.lazyPut<JadwalController>(() => JadwalController());
     Get.lazyPut<KiblatController>(() => KiblatController());
     Get.lazyPut<KontenController>(() => KontenController());
+    Get.lazyPut<OnBoardingController>(() => OnBoardingController());
   }
 }
