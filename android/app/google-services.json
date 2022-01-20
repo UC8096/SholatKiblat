@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "795639893097",
+    "project_id": "sholatkiblatapp",
+    "storage_bucket": "sholatkiblatapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795639893097:android:9089443f309f365436e6f8",
+        "android_client_info": {
+          "package_name": "com.example.sholatkiblat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795639893097-5vgere6knjgr33mrhuhem6qa6p7sl1bn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sholatkiblat",
+            "certificate_hash": "334918a16b401354996d40cb33cb51bb7e3da0c5"
+          }
+        },
+        {
+          "client_id": "795639893097-fsr2tsr81hnol8ut5pvo0ogfmf37ldcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-Z1s0brSsEe8EKLRiL-i3l5kftKsK25A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795639893097-fsr2tsr81hnol8ut5pvo0ogfmf37ldcl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
