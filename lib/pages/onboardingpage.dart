@@ -39,7 +39,7 @@ class OnBoardingPage extends StatelessWidget {
                 ),
                 padding: EdgeInsets.zero,
               ),
-              onPressed: () => Get.toNamed('/homepage'),
+              onPressed: () => Get.toNamed('/home'),
               child: Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 60, vertical: 12),
