@@ -10,10 +10,10 @@ class HomePage extends StatelessWidget {
         body: SafeArea(
           child: IndexedStack(
             index: controller.tabIndex,
-            children: [
-              const JadwalPage(),
+            children: const [
+              JadwalPage(),
               KiblatPage(),
-              const KontenPage(),
+              KontenPage(),
             ],
           ),
         ),
@@ -30,6 +30,7 @@ class HomePage extends StatelessWidget {
                 onTap: controller.changeTabIndex,
                 currentIndex: controller.tabIndex,
                 showSelectedLabels: true,
+                unselectedLabelStyle: poppins.copyWith(fontSize: 14),
                 selectedLabelStyle: poppins.copyWith(fontSize: 14),
                 showUnselectedLabels: true,
                 type: BottomNavigationBarType.fixed,
