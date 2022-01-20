@@ -1,0 +1,38 @@
+{
+    "users": {
+        "user": [
+            {
+                "uid": "663533",
+                "name": "Vyan",
+                "email": "email@mail.com",
+                "password": "pass",
+                "isCreator": false,
+                "isViewer": true
+            },
+            {
+                "uid": "424242",
+                "name": "Insya",
+                "email": "email@mail.com",
+                "password": "pass",
+                "isCreator": true,
+                "isViewer": true
+            }
+        ]
+    },
+    "kontens": {
+        "konten": [
+            {
+                "title": "ini judul",
+                "description": "ini deskripsi",
+                "image": "ini gambar",
+                "createby": "uid"
+            },
+            {
+                "title": "ini judul",
+                "description": "ini deskripsi",
+                "image": "ini gambar",
+                "createby": "uid"
+            }
+        ]
+    }
+}
